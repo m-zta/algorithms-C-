@@ -3,6 +3,14 @@
 #include <vector>
 #include <iostream>
 
+// TODO:
+// - Add merge sort
+// - Add quick sort
+// - Use more descriptive names for indices
+// - Add more comments
+// - Print steps directly from the sorting algorithms for efficiency
+
+
 // Print a vector with comma and brackets
 void print(std::vector<int> vec) {
     std::cout << "[";
@@ -12,12 +20,13 @@ void print(std::vector<int> vec) {
             std::cout << ", ";
         }
     }
-    std::cout << "]" << std::endl;
+    
+    std::cout << "]\n";
 }
 
 // Print every step of the sorting algorithm
-void print_steps(std::vector<std::vector<int>> steps) {
-    std::cout << "\nSorting process: \n";
+void print_steps(std::vector<std::vector<int>> steps, std::string algorithm) {
+    std::cout << "Algorithm: " << algorithm << "\n";
 
     for (int i {0}; i < steps.size(); i++) {
         std::cout << "Step " << i << ": ";
@@ -25,7 +34,30 @@ void print_steps(std::vector<std::vector<int>> steps) {
     }
 }
 
+bool execute_mode(int mode, std::vector<int> vec) {
+    switch(mode) {
+        case 1:
+            print_steps(bubble_sort(vec), "Bubble sort");
+            return true;
+        case 2:
+            print_steps(selection_sort(vec), "Selection sort");
+            return true;
+        case 3:
+            print_steps(insertion_sort(vec), "Insertion sort");
+            return true;
+        case 4:
+            // print_steps(merge_sort(vec));
+            return true;
+        case 5:
+            // print_steps(quick_sort(vec));
+            return true;
+        default:
+            std::cout << "Invalid mode, please enter an integer between 1 and 5.\n";
+            return false;
+    }
 
+    return false;
+}
 
 int main() {
     std::vector<int> vec = generate_random_vector(10, 0, 100);
@@ -44,25 +76,8 @@ int main() {
             continue;
         }
 
-        switch(mode) {
-            case 1:
-                print_steps(bubble_sort(vec));
-                break;
-            case 2:
-                print_steps(selection_sort(vec));
-                break;
-            case 3:
-                print_steps(insertion_sort(vec));
-                break;
-            case 4:
-                // print_steps(merge_sort(vec));
-                break;
-            case 5:
-                // print_steps(quick_sort(vec));
-                break;
-            default:
-                std::cout << "Invalid mode, please enter a number between 1 and 5.\n";
-                continue;
+        if (1 <= mode && mode <= 5 && execute_mode(mode, vec)) {
+            break;
         }
     } while (true);
 

@@ -1,5 +1,10 @@
 {
   "files.associations": {
-    "vector": "cpp"
+    "vector": "cpp",
+    "limits": "cpp",
+    "ratio": "cpp",
+    "chrono": "cpp",
+    "random": "cpp",
+    "algorithm": "cpp"
   }
 }
