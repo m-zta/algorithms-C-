@@ -6,14 +6,14 @@
 // sorting algorithms ranked by complexity
 
 // O(n^2)
-void bubble_sort(std::vector<int>& vec);
-void selection_sort(std::vector<int>& vec);
-void insertion_sort(std::vector<int>& vec);
+std::vector<std::vector<int>> bubble_sort(std::vector<int>& vec);
+std::vector<std::vector<int>> selection_sort(std::vector<int>& vec);
+std::vector<std::vector<int>> insertion_sort(std::vector<int>& vec);
 
 // O(n^2) but faster than bubble, selection and insertion
-void merge_sort(std::vector<int>& vec);
+std::vector<std::vector<int>> merge_sort(std::vector<int>& vec, int first, int last);
 
 // O(nlogn)
-void quick_sort(std::vector<int>& vec);
+std::vector<std::vector<int>> quick_sort(std::vector<int>& vec, int first, int last);
 
 # endif // SORTING_ALGORITHMS_H
