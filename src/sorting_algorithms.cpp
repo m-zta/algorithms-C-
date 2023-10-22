@@ -1,10 +1,14 @@
 #include "sorting_algorithms.hpp"
 #include <iostream>
 
-std::vector<std::vector<int>> bubble_sort(std::vector<int>& vec) {
-    std::vector<std::vector<int>> steps {};
+using std::vector;
+using std::cout;
+using std::size_t;
+
+vector<vector<int>> bubble_sort(vector<int>& vec) {
+    vector<vector<int>> steps {};
     steps.push_back(vec);
-    std::size_t n {vec.size()};
+    size_t n {vec.size()};
 
     for (int i {0}; i < n - 1; i++) {
         bool swapped {false};
@@ -23,10 +27,10 @@ std::vector<std::vector<int>> bubble_sort(std::vector<int>& vec) {
     return steps;
 }
 
-std::vector<std::vector<int>> selection_sort(std::vector<int>& vec) {
-    std::vector<std::vector<int>> steps {};
+vector<vector<int>> selection_sort(vector<int>& vec) {
+    vector<vector<int>> steps {};
     steps.push_back(vec);
-    std::size_t n {vec.size()};
+    size_t n {vec.size()};
 
     for (int i {0}; i < n - 1; i++) {
         int min_idx {i};
@@ -44,10 +48,10 @@ std::vector<std::vector<int>> selection_sort(std::vector<int>& vec) {
     return steps;
 }
 
-std::vector<std::vector<int>> insertion_sort(std::vector<int>& vec) {
-    std::vector<std::vector<int>> steps {};
+vector<vector<int>> insertion_sort(vector<int>& vec) {
+    vector<vector<int>> steps {};
     steps.push_back(vec);
-    std::size_t n {vec.size()};
+    size_t n {vec.size()};
 
     for (int i {1}; i < n; i++) {
         int key {vec.at(i)};
@@ -64,29 +68,3 @@ std::vector<std::vector<int>> insertion_sort(std::vector<int>& vec) {
 
     return steps;
 }
-
-// std::vector<std::vector<int>> merge_sort(std::vector<int>& vec, int first, int last) {
-//     std::vector<std::vector<int>> steps {};
-//     steps.push_back(vec);
-
-//     // input validation
-//     if (first < 0 || last >= vec.size()) {
-//         std::cout << "Invalid input for merge_sort.\n";
-//         return steps;
-//     }
-
-//     // base case
-//     if (first == last) {
-//         return steps;
-//     }
-
-//     int mid {(first + last) / 2};
-//     if (first < mid) {
-//         merge_sort(vec, first, mid);
-//     }
-//     if (mid + 1 < last) {
-//         merge_sort(vec, mid + 1, last);
-//     }
-
-//     return steps;
-// }
