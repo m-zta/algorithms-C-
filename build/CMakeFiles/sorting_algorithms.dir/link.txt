@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsorting_algorithms.a CMakeFiles/sorting_algorithms.dir/src/sorting_algorithms.cpp.o
-/usr/bin/ranlib libsorting_algorithms.a
