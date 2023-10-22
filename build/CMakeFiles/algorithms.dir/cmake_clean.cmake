@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/algorithms.dir/src/lgs.cpp.o"
+  "CMakeFiles/algorithms.dir/src/lgs.cpp.o.d"
   "CMakeFiles/algorithms.dir/src/main.cpp.o"
   "CMakeFiles/algorithms.dir/src/main.cpp.o.d"
   "CMakeFiles/algorithms.dir/src/sorting_algorithms.cpp.o"

@@ -129,6 +129,30 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+src/lgs.o: src/lgs.cpp.o
+.PHONY : src/lgs.o
+
+# target to build an object file
+src/lgs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.o
+.PHONY : src/lgs.cpp.o
+
+src/lgs.i: src/lgs.cpp.i
+.PHONY : src/lgs.i
+
+# target to preprocess a source file
+src/lgs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.i
+.PHONY : src/lgs.cpp.i
+
+src/lgs.s: src/lgs.cpp.s
+.PHONY : src/lgs.s
+
+# target to generate assembly for a file
+src/lgs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.s
+.PHONY : src/lgs.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... algorithms"
+	@echo "... src/lgs.o"
+	@echo "... src/lgs.i"
+	@echo "... src/lgs.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
