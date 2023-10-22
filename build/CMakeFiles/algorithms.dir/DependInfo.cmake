@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mario/code/cpp/algorithms/src/lgs.cpp" "CMakeFiles/algorithms.dir/src/lgs.cpp.o" "gcc" "CMakeFiles/algorithms.dir/src/lgs.cpp.o.d"
   "/Users/mario/code/cpp/algorithms/src/main.cpp" "CMakeFiles/algorithms.dir/src/main.cpp.o" "gcc" "CMakeFiles/algorithms.dir/src/main.cpp.o.d"
   "/Users/mario/code/cpp/algorithms/src/sorting_algorithms.cpp" "CMakeFiles/algorithms.dir/src/sorting_algorithms.cpp.o" "gcc" "CMakeFiles/algorithms.dir/src/sorting_algorithms.cpp.o.d"
   "/Users/mario/code/cpp/algorithms/src/vector_generator.cpp" "CMakeFiles/algorithms.dir/src/vector_generator.cpp.o" "gcc" "CMakeFiles/algorithms.dir/src/vector_generator.cpp.o.d"

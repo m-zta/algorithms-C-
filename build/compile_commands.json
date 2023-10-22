@@ -16,11 +16,5 @@
   "command": "/usr/bin/clang++  -I/Users/mario/code/cpp/algorithms/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/algorithms.dir/src/vector_generator.cpp.o -c /Users/mario/code/cpp/algorithms/src/vector_generator.cpp",
   "file": "/Users/mario/code/cpp/algorithms/src/vector_generator.cpp",
   "output": "CMakeFiles/algorithms.dir/src/vector_generator.cpp.o"
-},
-{
-  "directory": "/Users/mario/code/cpp/algorithms/build",
-  "command": "/usr/bin/clang++  -I/Users/mario/code/cpp/algorithms/include -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/algorithms.dir/src/lgs.cpp.o -c /Users/mario/code/cpp/algorithms/src/lgs.cpp",
-  "file": "/Users/mario/code/cpp/algorithms/src/lgs.cpp",
-  "output": "CMakeFiles/algorithms.dir/src/lgs.cpp.o"
 }
 ]

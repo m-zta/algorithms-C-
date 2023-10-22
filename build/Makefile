@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.27.0/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -128,30 +128,6 @@ algorithms: cmake_check_build_system
 algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
-
-src/lgs.o: src/lgs.cpp.o
-.PHONY : src/lgs.o
-
-# target to build an object file
-src/lgs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.o
-.PHONY : src/lgs.cpp.o
-
-src/lgs.i: src/lgs.cpp.i
-.PHONY : src/lgs.i
-
-# target to preprocess a source file
-src/lgs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.i
-.PHONY : src/lgs.cpp.i
-
-src/lgs.s: src/lgs.cpp.s
-.PHONY : src/lgs.s
-
-# target to generate assembly for a file
-src/lgs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/lgs.cpp.s
-.PHONY : src/lgs.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -234,9 +210,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... algorithms"
-	@echo "... src/lgs.o"
-	@echo "... src/lgs.i"
-	@echo "... src/lgs.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

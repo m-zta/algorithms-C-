@@ -45,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -81,12 +81,12 @@ clean: CMakeFiles/algorithms.dir/clean
 CMakeFiles/algorithms.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mario/code/cpp/algorithms/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target algorithms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mario/code/cpp/algorithms/build/CMakeFiles --progress-num=1,2,3,4 "Built target algorithms"
 .PHONY : CMakeFiles/algorithms.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/algorithms.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mario/code/cpp/algorithms/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mario/code/cpp/algorithms/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/algorithms.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mario/code/cpp/algorithms/build/CMakeFiles 0
 .PHONY : CMakeFiles/algorithms.dir/rule
