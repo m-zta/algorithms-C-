@@ -16,13 +16,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # specify directories where the compiler should look for headers
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-# specify the source files to be compiled
-# i.e. set(SOURCES src/main.cpp src/other.cpp)
-# OR
-# file(GLOB SOURCES "src/*.cpp") to grab wildcard files
+# specify directories where the linker should look for libraries
+file(GLOB SOURCES "src/*.cpp") 
 
 # add the executable
-add_executable(algorithms src/main.cpp src/sorting_algorithms.cpp src/vector_generator.cpp)
+add_executable(algorithms ${SOURCES})
 
 # add library
 # i.e. add_library(my_library ${SOURCES})
